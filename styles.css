@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.main-section {
+    position: relative;
+    height: 100vh;
+    background: url('assets/background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.title, .subtext {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: 5em; /* Increased font size */
+    font-weight: lighter; /* Made font weight bold for a stronger presence */
+    line-height: 1.2; /* Adjusted line height for better spacing */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Refined the text-shadow */
+}
+
+.subtext {
+    font-size: 2em;
+    text-align: center;
+    max-width: 80%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section {
+    background-color: #050f19;
+    color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-email {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2.5em; /* Adjusted font size for smaller screens */
+    }
+
+    .subtext {
+        font-size: 1em;
+    }
+}
