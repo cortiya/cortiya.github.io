@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
+    background-color: #00060e;
 }
 
 .main-section {
@@ -35,22 +38,23 @@ body, html {
 }
 
 .title {
-    font-size: 5em; /* Increased font size */
-    font-weight: lighter; /* Made font weight bold for a stronger presence */
-    line-height: 1.2; /* Adjusted line height for better spacing */
+    font-size: 5em;
+    font-weight: 300;
+    line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Refined the text-shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .subtext {
     font-size: 2em;
     text-align: center;
+    font-weight: 300;
     max-width: 80%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .contact-section {
-    background-color: #050f19;
+    background-color: #00060e;
     color: #ecf0f1;
     padding: 50px 0;
     text-align: center;
@@ -62,7 +66,7 @@ body, html {
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 2.5em; /* Adjusted font size for smaller screens */
+        font-size: 2.5em;
     }
 
     .subtext {
