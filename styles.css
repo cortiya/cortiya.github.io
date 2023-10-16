@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -8,10 +9,43 @@ body, html {
     background-color: #00060e;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: transparent;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding-right: 25px;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .main-section {
     position: relative;
     height: 100vh;
-    background: url('assets/background.jpg') no-repeat center center fixed; 
+    background: url('assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: black;
     color: #ffffff;
@@ -19,6 +53,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
 .main-section:before {
@@ -32,7 +67,8 @@ body, html {
     z-index: 1;
 }
 
-.title, .subtext {
+.title,
+.subtext {
     position: relative;
     z-index: 2;
 }
@@ -53,11 +89,51 @@ body, html {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.about-section {
+    background-color: #00060e;
+    color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about-text {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
 .contact-section {
     background-color: #00060e;
     color: #ecf0f1;
     padding: 50px 0;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-email {
@@ -71,5 +147,25 @@ body, html {
 
     .subtext {
         font-size: 1em;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+
+    .about-title {
+        font-size: 2em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .contact-title {
+        font-size: 2em;
     }
 }
