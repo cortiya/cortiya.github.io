@@ -1,14 +1,51 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
+
+body,
+html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
+    background-color: #00060e;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: transparent;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding-right: 25px;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-section {
     position: relative;
-    height: 100vh;
-    background: url('assets/background.jpg') no-repeat center center fixed; 
+    height: calc(100vh - 40px);
+    background: url('assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: black;
     color: #ffffff;
@@ -16,6 +53,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
 .main-section:before {
@@ -25,47 +63,116 @@ body, html {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.title, .subtext {
+.title,
+.subtext {
     position: relative;
     z-index: 2;
 }
 
 .title {
-    font-size: 5em; /* Increased font size */
-    font-weight: lighter; /* Made font weight bold for a stronger presence */
-    line-height: 1.2; /* Adjusted line height for better spacing */
+    font-size: 5em;
+    font-weight: 300;
+    line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Refined the text-shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .subtext {
     font-size: 2em;
     text-align: center;
+    font-weight: 300;
     max-width: 80%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.contact-section {
-    background-color: #050f19;
+.about-section {
+    background-color: #00060e;
     color: #ecf0f1;
     padding: 50px 0;
     text-align: center;
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about-text {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.contact-section {
+    background-color: #00060e;
+    color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-email {
     font-size: 1.2em;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #bdc3c7;
 }
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 2.5em; /* Adjusted font size for smaller screens */
+        font-size: 2.5em;
     }
 
     .subtext {
         font-size: 1em;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+
+    .about-title {
+        font-size: 2em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .contact-title {
+        font-size: 2em;
     }
 }
